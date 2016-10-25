@@ -1,0 +1,1 @@
+# add a string (no spaces) which matches the zabbix host identity (also ensure that in zabbix the same string is used for the identity of the psk)
