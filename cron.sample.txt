@@ -1,0 +1,4 @@
+  0           2,8,14,20  *   *    *    /home/pi/zabbix/speedtest.sh >> /var/log/zabbix.log
+  0           *          *   *    *    /home/pi/zabbix/usage.sh >> /var/log/zabbix.log
+  *           *          *   *    *    /home/pi/zabbix/heartbeat.sh >> /var/log/zabbix.log
+  *           *          *   *    *    /home/pi/zabbix/aps.sh >> /var/log/zabbix.log
