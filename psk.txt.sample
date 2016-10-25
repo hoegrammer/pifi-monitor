@@ -1,1 +1,2 @@
 # create a long hex string (e.g. with https://www.grc.com/passwords.htm) and put it here. This must also be the psk for the host in zabbix.
+# THEN DELETE THESE COMMENTS AND ENSURE NO BLANK LINES
