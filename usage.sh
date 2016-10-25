@@ -9,7 +9,7 @@ hostcount=`echo $results | grep -o '[0-9]* responded$' | grep -o '[0-9]*'`
 
 echo -e "\n\n"
 date
-echo "Usage"
+echo "Usage ($identity)"
 
 ## For debugging
 # hostcount=222

@@ -6,7 +6,7 @@ interface=`grep -o '^\S*' /home/pi/zabbix/interface.txt`
 
 echo -e "\n\n"
 date
-echo "APs"
+echo "APs ($identity)"
 send_cmd="zabbix_sender -z $server -s $identity --tls-connect psk --tls-psk-identity $identity --tls-psk-file /home/pi/zabbix/psk.txt"
 
 aps_down=`fping -I $interface -uq -t500 < /home/pi/zabbix/aps.txt`

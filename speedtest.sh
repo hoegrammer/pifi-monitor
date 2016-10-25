@@ -11,7 +11,7 @@ results=`/usr/local/bin/speedtest-cli --server 1727 --source $ip --simple` # 172
 
 echo -e "\n\n"
 date
-echo "Speed Test"
+echo "Speed Test ($identity)"
 echo $results
 pingtime=`echo $results | grep -o 'Ping\: [0-9\.]* ms' | grep -o '[0-9\.]*'` 
 download=`echo $results | grep -o 'Download\: [0-9\.]* Mbit\/s' | grep -o '[0-9\.]*'`
