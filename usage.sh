@@ -2,7 +2,9 @@
 
 identity=`grep -o '^\S*' /home/pi/zabbix/identity.txt` # don't allow spaces
 server=`grep -o '^\S*' /home/pi/zabbix/server.txt` # don't allow spaces
-results=`sudo arp-scan --interface=wlan0 --localnet`
+interface=`grep -o '^\S*' /home/pi/zabbix/interface.txt`
+
+results=`sudo arp-scan --interface=$interface --localnet`
 hostcount=`echo $results | grep -o '[0-9]* responded$' | grep -o '[0-9]*'`
 
 echo -e "\n\n"

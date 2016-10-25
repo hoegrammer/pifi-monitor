@@ -1,1 +1,4 @@
-*.txt
+interface.txt
+server.txt
+heartbeat.txt
+identity.txt

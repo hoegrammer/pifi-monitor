@@ -3,7 +3,11 @@
 
 identity=`grep -o '^\S*' /home/pi/zabbix/identity.txt` # don't allow spaces
 server=`grep -o '^\S*' /home/pi/zabbix/server.txt` # don't allow spaces
-results=`/usr/local/bin/speedtest-cli --server 1727 --simple` # 1727 = GRNET server, simple = not verbose output
+interface=`grep -o '^\S*' /home/pi/zabbix/interface.txt`
+
+ip=`/sbin/ifconfig $interface | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1 }'`
+
+results=`/usr/local/bin/speedtest-cli --server 1727 --source $ip --simple` # 1727 = GRNET server, simple = not verbose output
 
 echo -e "\n\n"
 date
