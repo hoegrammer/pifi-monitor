@@ -11,9 +11,9 @@ echo -e "\n\n"
 
 send_cmd="zabbix_sender -z $server -s $identity --tls-connect psk --tls-psk-identity $identity --tls-psk-file /home/pi/zabbix/psk.txt"
 
-aps_down=`fping -I $interface -uq -t500 $host`
+interface_down=`fping -I $interface -uq -t500 $host`
 
-if [ ${#aps_down} -ne 0 ]; then
+if [ ${#interface_down} -ne 0 ]; then
     output="DOWN $interface `date`"
 else
     output="OK $interface `date`"

@@ -9,7 +9,7 @@ date
 echo "APs"
 send_cmd="zabbix_sender -z $server -s $identity --tls-connect psk --tls-psk-identity $identity --tls-psk-file /home/pi/zabbix/psk.txt"
 
-aps_down=`fping -I $interface -uq -t500 < aps.txt`
+aps_down=`fping -I $interface -uq -t500 < /home/pi/zabbix/aps.txt`
 
 if [ ${#aps_down} -ne 0 ]; then
     output="Down: $aps_down"
