@@ -7,5 +7,7 @@ Raspi network monitor that sends info to zabbix from behind a firewall
 - get zabbix sender package from https://github.com/imkebe/zabbix3-rpi and install it with dpkg
 - clone this repo into home directory
 - change name of directory to "zabbix"
+- create /var/log/zabbix.log giving pi user write permissions
 - set up cron (see sample)
 - remove ".sample" from the filenames and follow the instructions inside them
+- change the password for the pi user!!!
