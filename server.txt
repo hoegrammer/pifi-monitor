@@ -1,0 +1,1 @@
+# enter the fqdn of the zabbix server that you want to send to.
