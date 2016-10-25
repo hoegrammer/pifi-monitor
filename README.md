@@ -15,4 +15,4 @@ Raspi network monitor that sends info to zabbix from behind a firewall
 
 # If you want to monitor 2 networks with one pi
 
-Create two hosts and clone the repo twice, into different directories, with different identity and psk. Remember to add both directory paths to crontab.
+Create two hosts and clone the repo twice, into different directories, with different identity and psk. Remember to add both directory paths to crontab, and to change them where they are hard-coded in the scripts.
