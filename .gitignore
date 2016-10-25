@@ -2,3 +2,5 @@ interface.txt
 server.txt
 heartbeat.txt
 identity.txt
+aps.txt
+psk.txt

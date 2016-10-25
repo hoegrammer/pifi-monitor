@@ -2,13 +2,14 @@
 
 identity=`grep -o '^\S*' /home/pi/zabbix/identity.txt` # don't allow spaces
 server=`grep -o '^\S*' /home/pi/zabbix/server.txt` # don't allow spaces
+interface=`grep -o '^\S*' /home/pi/zabbix/interface.txt`
 
 echo -e "\n\n"
 date
 echo "APs"
 send_cmd="zabbix_sender -z $server -s $identity --tls-connect psk --tls-psk-identity $identity --tls-psk-file /home/pi/zabbix/psk.txt"
 
-aps_down=`fping -uq -t500 < aps.txt`
+aps_down=`fping -I $interface -uq -t500 < aps.txt`
 
 if [ ${#aps_down} -ne 0 ]; then
     output="Down: $aps_down"
