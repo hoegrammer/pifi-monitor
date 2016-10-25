@@ -4,7 +4,8 @@ Raspi network monitor that sends info to zabbix from behind a firewall
 - set up host, items etc on zabbix server 
 - install raspbian or similar
 - sudo apt-get update
-- sudo apt-get install libltdl7 libodbc1 fping git arp-scan speedtest-cli
+- sudo apt-get install libltdl7 libodbc1 fping git arp-scan python-pip
+- sudo pip install speedtest-cli
 - get zabbix sender package from https://github.com/imkebe/zabbix3-rpi and install it with dpkg
 - clone this repo into home directory
 - change name of directory to "zabbix" 
