@@ -19,4 +19,4 @@ echo "$hostcount users online"
 send_cmd="zabbix_sender -z $server -s $identity --tls-connect psk --tls-psk-identity $identity --tls-psk-file /home/pi/zabbix/psk.txt"
 
 
-$send_cmd -k usage.hostcount -o $hostcount -vv
+$send_cmd -k usage.hostcount -o $hostcount
